@@ -29,7 +29,7 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: violet;
+    background: rgba(128, 128, 128, 0.233);
     display: grid;
     grid-template-rows: auto 1fr auto;
     row-gap: 1rem;
@@ -53,16 +53,16 @@
     padding: 1rem 1.5rem;
 }
 .close-btn{
-    font-size: 1rem;
-    background: red;
+    font-size: 1.5rem;
+    background:  blue;
     border-color: transparent;
     color: whitesmoke;
     transition: all 0.5s ease;
     cursor: pointer;
-    color: aqua;
+    color:whitesmoke;
 }
 .close-btn:hover{
-    color: red;
+    color:blue;
     background-color: whitesmoke;
     transform: rotate(360deg);
 }
@@ -76,7 +76,7 @@ a {
 
 .links a{
     display: block;
-    background: firebrick;
+    background: rgb(14, 14, 51);
     font-size: 1.5rem;
     text-transform: capitalize;
     padding: 1rem 1.5rem;
