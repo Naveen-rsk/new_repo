@@ -1,0 +1,162 @@
+body{
+    /* background-color: black; */
+    background-image: linear-gradient(to bottom,green,black);
+
+    height: 100vh;
+    width: 100vw;
+}
+i{
+    margin:1rem;
+    color: white;
+    font-size: 1.5rem;
+}
+.card{
+    color: white;
+    background-color: rgba(0, 0, 0, 0.096);
+    /* background-color: transparent; */
+    /* background-image: linear-gradient(to bottom,green,black); */
+    border: none;
+    
+}
+.btn{
+    font-weight: 600;
+    margin: 2px;
+}
+.btn:hover{
+    color: black;
+    border: solid 1px;
+}
+.list-group{
+    border: none;
+    background-color: transparent;
+}
+.list-group .list-group-item{
+    background-color: rgba(0, 0, 0, 0.096);
+    color: white;
+    font-weight: 600;
+
+}
+.container{
+    display: flex;
+    height: inherit;
+   
+}
+.lcontainer{
+    width: 30%;
+    display: flex;
+    flex-direction: column;
+}
+.library .card-header{
+ text-align: center;
+ font-weight: 600;
+
+}
+
+.library .card-body{
+    height: 11rem;
+}
+
+
+.library .card-footer{
+    display: flex;
+    flex-direction: column;
+    align-items:flex-start;
+    justify-content:flex-start;
+}
+.links {
+   display: flex;
+   flex-wrap: wrap;
+   justify-content:space-between ;
+   /* justify-self: flex-start; */
+   padding: 0px;
+}
+.links li{
+    list-style-type: none;
+}
+.links li a{
+    margin: 3px;
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+}
+
+
+    /* RIGHT CONTAINER */
+
+.rcontainer{
+    width: 70%;
+    overflow: scroll;
+    /* position: static; */
+
+}
+.rcontainer .card-header{
+    /* position: sticky; */
+    /* top: 5px; */
+    background-color: rgba(37, 37, 37, 0.5);
+}
+.rcontainer .card-body{
+    /* position: relative; */
+    display: flex;
+    flex-direction: column;
+}
+.card-body .scards{
+    /* border: 1px solid; */
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    /* align-items: center; */
+}
+.card-body .song-card{
+    width: 30%;
+    padding: 5px;
+    margin: 5px;
+    display: flex;
+    flex-direction: row;
+    background-color: rgba(0, 0, 0, 0.247);
+
+}
+.card-body .vertical{
+    /* border: 1px solid  white; */
+    display: flex;
+    flex-wrap: nowrap;
+    overflow: scroll;
+}
+.card-body .vertical .c1{
+    width: 150px;
+    margin: 5px;
+}
+.description{
+    height: 18rem;
+    /* background-color:aqua; */
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    overflow: auto;
+}
+.description .row{
+    display: flex;
+    justify-content: space-between;
+    /* align-items: center; */
+    /* overflow: auto; */
+}
+.description .row .col{
+    margin: 5px;
+}
+
+.description .logo{
+   /* color: red; */
+   /* border: 1px solid; */
+   float: right;
+   display: flex;
+   flex-direction: row;
+}
+@media screen and (max-width: 495px) {
+    .description .row .col{
+        width: 4rem;
+    }
+    
+}
+
+.lead{
+    margin: 3.7rem 1rem;
+}
