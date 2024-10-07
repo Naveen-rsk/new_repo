@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./Form.css" />
+  </head>
+  <body>
+    <header>
+      <div id="navbar">
+        <a href="./Index.html" class="logo">LearnHub</a>
+        <a href="" class="admin">Admin</a>
+      </div>
+    </header>
+    <div id="body">
+      <div class="inner-container">
+        <form id="userForm">
+          <h1 class="title">FILL THE FORM</h1>
+          <div class="fields">
+            <div class="mid">
+              <div class="input input1">
+                <label for="name">Name:</label>
+                <input type="text" id="name" class="nameInput" name="name" required />
+              </div>
+              <div class="input input2">
+                <label for="role">Role:</label>
+                <input type="text" id="role" name="role" required />
+              </div>
+              <div class="input input3">
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required />
+              </div>
+              <div class="input input4">
+                <label for="phone">Phone:</label>
+                <input type="tel" id="phone" name="phone" required />
+              </div>
+              <div class="input input5">
+                <label for="">Course:</label>
+                <select name="" id="course">
+                  <option value="">Select course</option>
+                  <option value="">React Basics</option>
+                  <option value="">Css fundamentals</option>
+                  <option value="">Html</option>
+                  <option value="">Advance java</option>
+                  <option value="">My Sql</option>
+                </select>
+              </div>
+              <div class="input input6">
+                <label for="">Status:</label>
+                <select name="" id="status">
+                  <option value="">Unplaced</option>
+                  <option value="">placed</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="submit">
+            <button class="btn" onclick="submitForm()">Submit</button>
+          </div>
+        </form>
+        <div class="cardCover">
+          <div id="cardsContainer"></div>
+        </div>
+      </div>
+    </div>
+    <footer>
+      <div class="footer">
+        <h1>LearnHub</h1>
+        <p>© 2022 Tailwind Labs Inc. All rights reserved.</p>
+        <div class="links">
+          <a href="">Form</a>
+          <p>|</p>
+          <a href="">Notes</a>
+        </div>
+      </div>
+    </footer>
+
+    <script>
+      function submitForm() {
+        const name = document.getElementById("name").value;
+        const role = document.getElementById("role").value;
+        const email = document.getElementById("email").value;
+        const phone = document.getElementById("phone").value;
+        const course = document.getElementById("course").value;
+        const status = document.getElementById("status").value;
+
+        const card = document.createElement("div");
+        card.className = "card";
+        card.innerHTML = `
+                <div>
+                <label id="nameLabel">N</label>
+                <h2>${name}</h2>
+                </div>
+                <p>Role: ${role}</p>
+                <p>Email: ${email}</p>
+                <p>Phone no: ${phone}</p>
+                <p>Course: ${course}</p>
+                <p>Status: ${status}</p>
+                
+                <button onclick="this.parentElement.remove()">Delete</button>
+                
+            `;
+
+        document.getElementById("cardsContainer").appendChild(card);
+
+        // Form clearence
+        document.getElementById("userForm").reset();
+      }
+
+  // *********** Card label *********
+
+
+//       document.getElementById('userForm').addEventListener('submit', function(event) {
+//        event.preventDefault(); 
+  
+//   const name = document.getElementsByClassName('nameInput').value;
+  
+//   if (name) {
+//     const initial = name.charAt(0).toUpperCase();
+//     document.getElementById('nameLabel').innerText = `Your Initial: ${initial}`;
+//   }
+// });
+    </script>
+  </body>
+</html>
